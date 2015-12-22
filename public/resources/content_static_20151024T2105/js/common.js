@@ -1,5 +1,6 @@
 /**
  * Created by yanli6 on 11/26/15.
+ * just change
  */
 $(function () {
         $(document).on("click", '#shopping_cart_button', function () {
