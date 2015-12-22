@@ -1,0 +1,64 @@
+.container
+  .row
+    .col-xs-12.col-sm-12.col-md-3of5.col-lg-3of5.item-gallery-div-sm-style
+      .item-gallery-header-wrapper#item-gallery-tile-and-brief
+        -#%p.product-title
+      .item-gallery
+        .item-gallery-images.item-gallery-swiper-container.clearer
+          %ul.item-gallery-swiper-wrapper
+            %li.item-gallery-swiper-wrapper-slide#item-gallery-swiper-wrapper-slide-li
+              -#<img src="public/resource/image/jb700g01.jpg" alt="it01">
+    .col-xs-12.col-sm-12.col-md-2of5.col-lg-2of5.item-panel-div-sm-style
+      .item-panel
+        %div
+          .item-panel-header
+            .item-panel-header-wrapper#item-panel-header-wrapper
+        .item-panel-content
+          %div
+            .item-panel-content-add-to-cart
+              .item-panel-content-add-to-cart-btn
+                .item-panel-content-add-to-cart-btn-message
+                  %i.glyphicon.glyphicon-shopping-cart.cart
+                  %span.message 加入购物车
+                %button.add-to-cart-btn-plus
+                  %i.icon-plus.plus
+        .item-panel-content-comment-favorite
+          .product-favorite-region
+            .product-favorite
+              .product-favorite-button
+                .product-favorite-button-icon
+                  %i.icon-heart-empty
+                .product-favorite-count#product-favorite-count
+          .product-comment-region
+            .product-comment
+              .product-comment-button
+                .product-comment-button-icon
+                  %i.icon-comment-alt
+                .product-comment-count#product-comment-count
+    .col-xs-12.col-sm-12.col-md-3of5.col-lg-3of5
+      .item-detail-description-region
+        %h3 商品详情
+        %article.item-detail-description
+          .item-detail-description-panel
+            .item-detail-description-content
+              %img{:src=>"http://localhost:9292/resources/infoimage/products_detail/0.jpg",:style=>"width:100%;"}
+    .col-xs-12.col-sm-12.col-md-2of5.col-lg-2of5
+      .item-detail-comment-region#item-detail-comment-region
+        -#%h3 用户评论
+        -#<article class="item-detail-comment">
+        -#  <div class="item-detail-comment-panel">
+        -#    <div class="item-detail-comment-content">
+        -#      <p>用户评价信息</p>
+        -#    </div>
+        -#  </div>
+        -#  </article>
+        -#  <article class="item-detail-comment">
+        -#    <div class="item-detail-comment-panel">
+        -#      <div class="item-detail-comment-content">
+        -#        <p>用户评价信息</p>
+        -#      </div>
+        -#    </div>
+        -#  </article>
+%script
+  != "productDetail=#{@product};"
+%script{:src => "/resources/content_static_20151024T2105/js/productDetail.js", :type => "text/javascript"}

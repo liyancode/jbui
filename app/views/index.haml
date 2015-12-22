@@ -1,0 +1,58 @@
+%section.banner-region
+  .banner
+    .banner-item-region
+      .banner-item.home
+        %header
+          %a{:href=>"#"}
+            %h1 圣诞节温暖大礼
+          %a{:href=>"#"}
+            进入活动主页
+            %span.glyphicon.glyphicon-chevron-right
+        .img-container
+          .image{:style=>"background-image: url('resources/content_static_20151024T2105/image/banner-image.jpg')"}
+%section.container
+  .row
+    %header.product-list-header
+      .product-list-header-row
+        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+          %p.product-list-header-title 曲奇饼干
+          %p.product-list-header-sub-title 珍妮曲奇（JennyBakery）
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12
+      %ul.product-list-ul#home_product_list_ul
+        -#%li.col-xs-12.col-sm-12.col-md-15.col-lg-15
+          %article.product.light
+            .image-wrapper
+              .image
+                %img{:src=>"resources/content_static_20151024T2105/image/1.jpg"}
+            .info
+              %header
+                %p.product-title 珍妮曲奇（JennyBakery）
+                %p.product-brief
+                  %a{:href=>"#"} 珍妮曲奇（JennyBakery）8味果仁手工曲奇700g X1罐
+                %span.product-price
+                  %span ¥
+                  %strong 148.0
+              .product-comment-favorite
+                .product-favorite-region
+                  .product-favorite
+                    .product-favorite-button
+                      .product-favorite-button-icon
+                        %i.icon-heart-empty
+                      .product-favorite-count
+                        150
+                .product-comment-region
+                  .product-comment
+                    .product-comment-button
+                      .product-comment-button-icon
+                        %i.icon-comment-alt
+                      .product-comment-count
+                        33
+              .product-add-to-cart-region
+                .product-add-to-cart
+                  .add-to-cart-btn
+                    .add-to-cart-btn-message
+                      %i.glyphicon.glyphicon-shopping-cart.cart
+                      %span.message 加入购物车
+                    %button.add-to-cart-btn-plus
+                      %i.icon-plus.plus
+%script{:src => "/resources/content_static_20151024T2105/js/ajax.js", :type => "text/javascript"}
