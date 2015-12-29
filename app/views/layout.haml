@@ -24,8 +24,8 @@
               sitelogo
           %div.header-account-button-region
             %div.account-button
-              %a.signin.hidden{:href=>'#'} 登录
-              %div.account-button_avatar
+              %a#header_signin_button.signin{:href=>'#'} 登录
+              %div.account-button_avatar.hidden
                 %div.account-button_avatar-img
               %div.account-button_dropdown-container
                 %ul.account-button_dropdown
@@ -208,12 +208,61 @@
               %a{:href=>"#"} 常见问题
             %li.browse-menu_footer-link
               %a{:href=>"#"} 联系客服
-    %div.modal-region
-      .login.modal
-    %div#overlay_all
+    #login_and_register_region_div.modal-region
+    #login_and_register_region_div_content_none{:style=>"display:none;"}
+      #login_and_register_region_dialog{:class=>"login modal backdrop fade active in register",:role=>"dialog","aria-hidden"=>"false"}
+        .modal-dialog
+          .modal-content
+            .modal-header
+              %button#login_and_register_region_div_close.close.ss-icon.pull-right
+                %i.icon-remove
+              %h3.action-msg
+                welcome
+            .modal-body.login-form
+              .login-panel.signin-panel
+                .font
+                  %a.login-btn.v-align-wrapper.middle{:href=>"#"}
+                    %header.v-align
+                      %h3 有账号？
+                      %h2 登 录
+                .back
+                  .recommended-text
+                    登 录
+                  .input-wrapper
+                    %input.password{:type=>"password",:name=>"password",:placeholder=>"密 码",:autocomplete=>"current-password"}
+                  .login-btns
+                    .column-1of1
+                      %button.submit.button.red-bg.shadow.login-btns-btn
+                        %span.text
+                          登 录
+                      %a.forgot-link{:href=>"#"} 忘记密码？
+                      %a.needs-password-link.hidden 邮箱找回
+                      .forgot-region
+              .login-panel.register-panel
+                .font
+                  %a.login-btn.v-align-wrapper.middle{:href=>"#"}
+                    %header.v-align
+                      %h3 需要新账号？
+                      %h2 注 册
+                .back
+                  .recommended-text
+                    登 录
+                  .input-wrapper
+                    %input.firstname{:type=>"text",:name=>"username",:placeholder=>"First Name",:autocomplete=>"username"}
+                    %input.firstname{:type=>"text",:name=>"gender",:placeholder=>"Last Name",:autocomplete=>"gender"}
+                  .input-wrapper
+                    %input.email{:type=>"email",:name=>"email",:placeholder=>"Email ",:autocomplete=>"email"}
+                  .input-wrapper
+                    %input.password{:type=>"password",:name=>"password",:placeholder=>"密 码",:autocomplete=>"new-password"}
+                  .login-btns
+                    .column-1of1
+                      %button.submit.button.red-bg.shadow.login-btns-btn
+                        %span.text
+                          登 录
+    #overlay_all
     %footer.bs-docs-footer{:role=>"contentinfo"}
-      %div.container
-        %div.footer-links
+      .container
+        .footer-links
           %a{:href=>"#"} 联系客服
           %a{:href=>"#"} 关于我们
         ©2015 公司名称 版权所有

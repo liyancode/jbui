@@ -2,7 +2,11 @@
 get '/login'do
   client=HTTPClient.new
   auth_result=client.get("#{CONFIG['REST_API_Server']}/users/auth?user_name=#{params[:user_name]}&&password=#{params[:password]}")
-  auth_result.status.to_s
+  if auth_result.status !=200
+
+  else
+
+  end
 end
 
 post '/register'do

@@ -1,6 +1,5 @@
 /**
  * Created by yanli6 on 11/26/15.
- * just change
  */
 $(function () {
         $(document).on("click", '#shopping_cart_button', function () {
@@ -14,6 +13,13 @@ $(function () {
                 overlay_all.style.display='block';
             }
             console.log("click");
+        });
+        $(document).on("click", '#header_signin_button', function () {
+            var login_and_register_region_div=$('#login_and_register_region_div')[0];
+            login_and_register_region_div.innerHTML=$('#login_and_register_region_div_content_none')[0].innerHTML;
+        });
+        $(document).on("click", '#login_and_register_region_div_close', function () {
+            $('#login_and_register_region_div')[0].innerHTML='';
         });
         $(document).on("click", '#overlay_all', function () {
 
@@ -57,5 +63,21 @@ $(function () {
             var browse_menu_content_region=$('#browse-menu_content-region')[0];
             browse_menu_content_region.innerHTML=$('#browse-menu_content-section-'+item_order).html();
         });
-}
+
+        $(document).on("click",'.login-panel.signin-panel .front',function(){
+            var login_and_register_region_dialog=$('#login_and_register_region_dialog');
+            login_and_register_region_dialog.removeClass('register');
+            login_and_register_region_dialog.addClass('signin');
+        });
+        $(document).on("click",'.login-panel.register-panel .front',function(){
+            var login_and_register_region_dialog=$('#login_and_register_region_dialog');
+            login_and_register_region_dialog.removeClass('signin');
+            login_and_register_region_dialog.addClass('register');
+        });
+        $(document).on('click','#login_and_register_region_dialog',function(e) {
+            if (e.target !== this)
+                return;
+            $('#login_and_register_region_div')[0].innerHTML='';
+        });
+    }
 );
