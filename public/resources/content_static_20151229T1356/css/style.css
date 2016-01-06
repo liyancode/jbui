@@ -1143,6 +1143,9 @@ i.added {
     margin-right: 22%;
     margin-left: 9%;
 }
+.add-to-cart-btn.show-selected-count button:hover{
+    background-color: #309273;
+}
 .add-to-cart-btn-message .cart{
     margin: 0 10px 0 0;
     color: #36a582;
@@ -1182,6 +1185,50 @@ i.added {
     /*top: 3px;*/
     -webkit-font-smoothing: none;
     color: #36a582;
+}
+.add-to-cart-btn-minus{
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.42857143;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    -webkit-transition: background-color 0.1s;
+    transition: background-color 0.1s;
+    width: 22%;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    padding: 0;
+    /*left: 0;*/
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 0 4px 0;
+}
+.add-to-cart-btn-minus .minus{
+    position: relative;
+    display: block;
+    font-size: 14px;
+    /*top: 3px;*/
+    -webkit-font-smoothing: none;
+    color: #36a582;
+}
+.add-to-cart-btn.show-selected-count{
+    background: #36a582;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.add-to-cart-btn.show-selected-count .add-to-cart-btn-message{
+    cursor: default;
+    pointer-events: none;
+    color: #FFF;
+}
+.add-to-cart-btn.show-selected-count .add-to-cart-btn-plus .plus,
+.add-to-cart-btn.show-selected-count .add-to-cart-btn-minus .minus{
+    color: #FFF;
 }
 .item-gallery {
     position: relative;
@@ -2496,6 +2543,9 @@ input[type='text'], input[type='email'], input[type='password'], input[type='num
     margin-right: 4%;
 }
 @media (max-width:767px) {
+    .header-account-button-region{
+        display: none;
+    }
     .bs-docs-nav .navbar-right {
         float: right;
         padding-right: 15px;

@@ -57,11 +57,11 @@
                   %input.search-submit.icon-search{:tabindex=>"2",:type=>"submit",:value=>"Go",:onsubmit=>"return false;"}
           %div#shopping_cart_button.cart-button-region
             %a.btn.btn-danger.btn-lg.btn-block
-              %span.glyphicon.glyphicon-shopping-cart
-              ¥ 148.00
+              %span.glyphicon.glyphicon-shopping-cart#shopping_cart_total_price
+              -#¥ 0.01
+              -#-##
             %div.count.v-align-wrapper.middle
-              %span.quantity.v-align
-                1
+              %span.quantity.v-align#shopping_cart_total_count
       %div.header-bottom
     %div#main{:role=>"main"}
       =yield
@@ -79,14 +79,14 @@
                     %div.quantity-column 商品数
                     %div.total-column 总计
                   %ul
-                    -#%li.edit-order-item
+                    %li.edit-order-item
                       %div.item-column
                         %div.item-image
-                          %img{:src=>"resources/content_static_20151229T1356/image/1.jpg"}
+                          %img{:src=>"resources/infoimage/products_main/50.jpg"}
                         %div.item-detail
                           %span.product-title 珍妮曲奇
-                          %a.product-brief 700g 8味果仁手工曲奇
-                          %span.product-price ¥ 148.00
+                          %a.product-brief 640g 4味大盒
+                          %span.product-price ¥ 155.00
                       %div.quantity-column
                         %div.popover-region
                         %div.quantity-select
@@ -97,12 +97,12 @@
                             %button.quantity-select-minus
                               %i.icon-minus
                       %div.total-column
-                        %span.total-price ¥ 148.00
+                        %span.total-price ¥ 155.00
         %footer.cart-article-footer
           %div.cart-article-footer_subtotal-container
             %div.cart-article-footer_subtotal
               %h3.cart-article-footer_subtotal-title 合计：
-              %span.cart-article-footer_subtotal-count ¥ 148.00
+              %span.cart-article-footer_subtotal-count ¥ 155.00
           %div.cart-article-footer_checkout-button-container
             %button.btn.btn-lg.cart-article-footer_checkout-button{:type=>"button"} 去结算
     %div.browse-menu-region
@@ -111,7 +111,7 @@
           %div.browse-menu_nav-region
             %div.browse-menu_nav
               %a.browse-menu_sitelogo{:href=>"/"}
-                %i.browse-menu_sitelogo-icon logoname
+                %i.browse-menu_sitelogo-icon 珍妮曲奇
               %ul
                 %li#browse-menu_nav-item-first.browse-menu_nav-item.is-selected
                   %i.browse-menu_nav-icon.icon-user
@@ -130,7 +130,7 @@
                   %button.browse-menu_nav-button 节日礼盒
           %div#browse-menu_content-region.browse-menu_content-region
             %section.browse-menu_content-section
-              %a.browse-menu_title{:href=>"#"} 我的账户
+              %a.browse-menu_title{:href=>"#"} 你好，xiaoming
               %ul.browse-menu_content-items
                 %li.browse-menu_item
                   %a.browse-menu_item-link 个人信息
